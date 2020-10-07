@@ -1,0 +1,281 @@
+/*Police*/
+@font-face {
+    font-family: Minecraft;
+    src: url(../font/Minecraft.ttf);
+}@font-face{
+    font-family: LostFish;
+    src: url(../font/LostFish.ttf);
+}
+
+/*Media querries*/
+@media screen and (min-height: 800px){
+    @keyframes scrolling{
+        from{margin-top:0px;}
+        to{margin-top:-2100px;}
+    }
+    @keyframes faster{
+        from{margin-top:-2100px;}
+        to{margin-top:-3900px;}
+    }
+    @keyframes slow{
+        from{margin-top:-3900px;}
+        to{margin-top:-7187px;}
+    }
+    @keyframes stay{
+        from{margin-top: -7187px;}
+        to{margin-top: -7187px;}
+    }
+}
+@media screen and (max-height: 799px) and (min-height:400px){
+    @keyframes scrolling{
+        from{margin-top:0px;}
+        to{margin-top:-2100px;}
+    }
+    @keyframes faster{
+        from{margin-top:-2100px;}
+        to{margin-top:-3900px;}
+    }
+    @keyframes slow{
+        from{margin-top:-3900px;}
+        to{margin-top:-7400px;}
+    }
+    @keyframes stay{
+        from{margin-top: -7400px;}
+        to{margin-top: -7400px;}
+    }
+}
+@media screen and (max-height: 399px){
+    @keyframes scrolling{
+        from{margin-top:0px;}
+        to{margin-top:-2100px;}
+    }
+    @keyframes faster{
+        from{margin-top:-2100px;}
+        to{margin-top:-3900px;}
+    }
+    @keyframes slow{
+        from{margin-top:-3900px;}
+        to{margin-top:-7600px;}
+    }
+    @keyframes stay{
+        from{margin-top: -7600px;}
+        to{margin-top: -7600px;}
+    }
+}
+/*Annimations*/
+@keyframes spin{
+    from {transform:rotate(360deg);}
+    to {transform:rotate(0deg);}
+}
+@keyframes prog{
+    100%{
+        height: 93%;
+        border: 2px solid;
+    }
+    3%{
+        border: 2px solid;
+    }
+    0%{
+        height: 10%;
+        border: 2px solid;
+    }
+}
+
+/*Début CSS*/
+html{
+    height: 8000px;
+    cursor: url(../images/cursor.png), default;
+    margin: 0px;
+}body{
+    height:100%;
+    overflow: hidden;
+    z-index:1000;
+}
+
+.container{
+    display:grid;
+    grid-template-columns:repeat(10,10%);
+    grid-template-rows:repeat(100,80px);
+    height: 8000px;
+    background-image: url(../images/grass.png);
+}body:hover .container{
+    margin-top:0%;
+    animation:  scrolling 15s linear 2s,
+                faster 8s linear 17s,
+                slow 20s linear 25s,
+                stay 60s linear 45s;
+}
+
+/*Gestion fleurs*/
+.rose{
+    background-image: url("../images/rose.png");
+    background-repeat: no-repeat;
+}.marguerite{
+    background-image: url("../images/marguerite.png");
+    background-repeat: no-repeat;
+}.allium{
+    background-image: url("../images/allium.png");
+    background-repeat: no-repeat;
+}.orchidee{
+    background-image: url("../images/orchidee.png");
+    background-repeat: no-repeat;
+}
+
+/***JEU***/
+div.eau{
+    z-index: 100;
+    background-color: lightblue;
+    background-image: url(../images/water.png);
+}div.terre{
+    background-image: url(../images/grass.png);
+}
+
+/*Popup défaite*/
+body:hover div.eau:not(:hover) ~ .popup{
+    cursor: url(../images/cursor2.png), auto;
+    font-family: Minecraft;
+    text-align: center;
+    font-size: 50px;
+    height: 1000vh;
+    width: 100vw;
+    position:absolute;
+    left:0px;
+    top:0px;
+    background-image: url(../images/stone.png);
+    z-index:1000;
+    display:block;
+}body:hover div.eau:not(:hover) ~ .popupText{
+    text-align: center;
+    color: blue;
+}body:hover div.eau:hover ~ .popup{
+    display: none;
+}div.popup{
+    display: none;
+}div.popup a.close{
+    background-image: url(../images/stonebrick.png);
+    display: block;
+    width: 384px;
+    border: 2px black solid;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}body:hover a:hover{
+    cursor: url(../images/cursor2_clic.png), auto;
+}
+
+/*Gestion Poissons*/
+.poisson1{
+    transform-origin: 60px 60px;
+    animation:spin 1s linear 0s infinite;
+    position:relative;
+    margin-top:170px;
+    margin-left:35px;
+    margin-bottom: 40px;
+}.poisson2{
+    transform-origin: 60px 60px;
+    animation:spin 1.3s linear .2s infinite;
+    position:relative;
+    margin-top:100px;
+    margin-left:180px;
+    margin-bottom:50px;
+}.poisson3{
+    transform-origin: 60px 60px;
+    animation:spin 1.1s linear .3s infinite;
+    position:relative;
+    margin-top:50px;
+    margin-left:100px;
+    margin-bottom: 40px;
+}.poisson4{
+    transform-origin: 60px 60px;
+    animation:spin 1.6s linear .5s infinite;
+    position:relative;
+    margin-top:100px;
+    margin-left:250px;
+}.poisson5{
+    transform-origin: 60px 60px;
+    animation:spin 1s linear .6s infinite;
+    position:relative;
+    margin-top:0px;
+    margin-left:330px;
+    margin-bottom:20px;
+}.poisson6{
+    transform-origin: 60px 60px;
+    animation:spin 2s linear .7s infinite;
+    position:relative;
+    margin-top:110px;
+    margin-left:210px;
+    margin-bottom: 5px;
+}.poisson7{
+    transform-origin: 60px 60px;
+    animation:spin 1.7s linear .2s infinite;
+    position:relative;
+    margin-top:5px;
+    margin-left:150px;
+    margin-bottom:40px
+}.poisson8{
+    transform-origin: 60px 60px;
+    animation:spin 1.9s linear .3s infinite;
+    position:relative;
+    margin-top:0px;
+    margin-left:300px;
+    margin-bottom:20px;
+}.poisson9{
+    transform-origin: 60px 60px;
+    animation:spin 1.2s linear .1s infinite;
+    position:relative;
+    margin-top:10px;
+    margin-left:250px;
+    margin-bottom:0px;
+}.poisson10{
+    transform-origin: 60px 60px;
+    animation:spin 1.3s linear 0s infinite;
+    position:relative;
+    margin-top:10px;
+    margin-left:250px;
+    margin-bottom:0px;
+}
+
+/*Texte Départ et Arrivée*/
+.para{
+    text-align:center;
+    font-family: LostFish;
+    font-size:100px;
+    color:#133aad;
+}
+.para2{
+    text-align:center;
+    font-family: LostFish;
+    font-size:100px;
+    color:#133aad;
+    margin: inherit;
+}a.para2{
+    font-size: 50px;
+}
+
+/*PROGRESS BAR*/
+body:hover .progressbar{
+    z-index:1000;
+    background-color:gray;
+    width:3%;
+    height:45%;
+    position:absolute;
+    top:3%;
+    left:95%;
+    margin-top:0%;
+    display:block;
+    border-radius: 20px;
+    border:2px solid;
+}body:hover .progressbar .prog{
+    z-index:1001;
+    height: 10%;
+    border:2px solid;
+    background:lightgreen;
+    animation:prog 43.5s linear 2s;
+    animation-iteration-count: 1;
+    width: 70%;
+    border-radius: 20px;
+    position: relative;
+    left:10%;
+    top:2%;
+    animation-fill-mode: forwards;
+}

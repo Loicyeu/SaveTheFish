@@ -1,0 +1,15 @@
+/*PAGE CONTENT*/
+
+section#content{
+    background-color: white;
+}
+.NEPASDISPLAY{
+    display: none;
+}
+
+iframe{
+    width: 100%;
+    height: 99%;
+    border: none;
+    background-color: white;
+}

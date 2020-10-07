@@ -1,0 +1,9 @@
+/*PAGE CONTENT*/
+
+section#content{
+    background-color: lightcoral;
+}
+
+a:not(:hover){
+    color:red;
+}

@@ -1,0 +1,25 @@
+/*PAGE CONTENT*/
+
+section#content{
+    background-color: lightcoral;
+    padding: 5px;
+}
+
+/*I / Présentation du jeu*/
+h2.presentation{
+    color: black;
+}p.firstP{
+    color: black;
+}span.italic{
+    font-style: italic;
+}
+/*II / Principaux éléments*/
+div.element{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}img.element{
+    vertical-align: middle;
+}
+
+/*III Conseil */
